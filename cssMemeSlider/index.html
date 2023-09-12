@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <title>CSS Meme Slider</title>
 </head>
 <body>
-    <header>
-        <h1>CSS Meme Slider</h1>
-    </header>
-    <main>
-        <img src="./assets/img/1.jpg" alt="">
-        <img src="./assets/img/2.jpg" alt="">
-        <img src="./assets/img/3.jpg" alt="">
-        <img src="./assets/img/4.jpg" alt="">
-        <img src="./assets/img/5.jpg" alt="">
-        <img src="./assets/img/6.jpg" alt="">
-    </main>
-    <footer>
-
-    </footer>
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio" id="r1" checked>
+                <input type="radio" name="radio" id="r2">
+                <input type="radio" name="radio" id="r3">
+                <input type="radio" name="radio" id="r4">
+                <input type="radio" name="radio" id="r5">
+        
+                <div class="slide s1"><img src="./assets/img/1.jpg" alt=""></div>
+                <div class="slide"><img src="./assets/img/2.jpg" alt=""></div>
+                <div class="slide"><img src="./assets/img/3.jpg" alt=""></div>
+                <div class="slide"><img src="./assets/img/4.jpg" alt=""></div>
+                <div class="slide"><img src="./assets/img/5.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="nav-block">
+            <div class="text">
+                <p class="text t1">Wake up! You need to work to feed us!</p>
+                <p class="text">I just a dog! Don't look at me!</p>
+                <p class="text">Is it my salary? Such a small...</p>
+                <p class="text">Just keep doing what you're doing! Despite everything!</p>
+                <p class="text">Thank you for your attention!</p>
+            </div>
+            <div class="nav"> 
+                <label for="r1" class="circle"></label>
+                <label for="r2" class="circle"></label>
+                <label for="r3" class="circle"></label>
+                <label for="r4" class="circle"></label>
+                <label for="r5" class="circle"></label>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
