@@ -36,8 +36,8 @@ body {
 }
 
 .circle-area {
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     margin: 6px;
     cursor: pointer;
     transition: background-color 0.5s ease;
@@ -68,7 +68,7 @@ input[name="radio"] {
 }
 
 /* не работает */
-input[type="radio"]:checked, .radio_checked {
+input[type="radio"]:checked {
     background-color: #2ca2da;
     opacity: 1;
     pointer-events: none;
