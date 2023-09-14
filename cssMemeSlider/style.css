@@ -47,6 +47,7 @@ body {
 .nav {
     display: flex;
     background-color: #222222;
+    margin-right: -0.6em;
 }
 
 .circle-area {
