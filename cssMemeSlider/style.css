@@ -34,13 +34,15 @@ body {
 .nav-block {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .slides-text {
     height: 1.25rem;
     overflow: hidden;
-    align-self: center;
 }
+
 .slides-text p {
     line-height: 1.25;
     transition: margin-bottom 1s ease;
