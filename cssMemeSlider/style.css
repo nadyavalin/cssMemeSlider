@@ -23,14 +23,24 @@ body {
     box-shadow: 0px 5px 10px 0px #000000;
 }
 
+.slides-img img {
+    width: 100%;
+    object-fit: cover;
+    transition: margin-left 1s ease;
+}
+
 .nav-block {
     display: flex;
     justify-content: space-between;
 }
 
 .slides-text {
-    height: 1.2rem;
+    height: 20px;
     overflow: hidden;
+}
+
+.slides-text p {
+    transition: margin-bottom 1s ease;
 }
 
 .nav {
@@ -78,29 +88,24 @@ input[name="radio"] {
     transition-duration: .4s;
 }
 
-.slides-img img {
-    width: 100%;
-    object-fit: cover;
-}
-
 #r1:checked ~ .slides-img > .s1 {
-    margin-left:0;
+    margin-left: 0;
 }
 
 #r2:checked ~ .slides-img > .s1 {
-    margin-left:-100%;
+    margin-left: -100%;
 }
 
 #r3:checked ~ .slides-img > .s1 {
-    margin-left:-200%;
+    margin-left: -200%;
 }
 
 #r4:checked ~ .slides-img > .s1 {
-    margin-left:-300%;
+    margin-left: -300%;
 }
 
 #r5:checked ~ .slides-img > .s1 {
-    margin-left:-400%;
+    margin-left: -400%;
 }
 
 
