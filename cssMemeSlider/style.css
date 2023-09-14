@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     max-width: fit-content;
     height: 80vh;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .slides-img {
@@ -39,6 +39,7 @@ body {
 .slides-text {
     height: 1.25rem;
     overflow: hidden;
+    align-self: center;
 }
 .slides-text p {
     line-height: 1.25;
@@ -62,7 +63,6 @@ body {
 }
 
 .circle {
-
     height: 0.7rem;
     width: 0.7rem;
     opacity: .7;
@@ -140,13 +140,9 @@ input[name="radio"] {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    body {
-        font-size: 0.75em;
-    }
-   
+@media screen and (max-width: 900px) {
     .slides-img {
-        width: 70vw;
+        width: 90vw;
     }
     
     .slides-img img {
@@ -179,8 +175,11 @@ input[name="radio"] {
     }
 
     .slides-text {
-        height: 0.9375rem;
         align-self: flex-start;
+    }
+
+    .slides-text p {
+        line-height: 1.2;
     }
 
     #r1:checked ~ .nav-block > .nav > .circle-area:nth-child(1) > .circle,
@@ -190,26 +189,6 @@ input[name="radio"] {
     #r5:checked ~ .nav-block > .nav > .circle-area:nth-child(5) > .circle {
         opacity: 1;
         border: 0.125rem solid #ffffff;
-    }
-
-    #r1:checked ~ .nav-block > .slides-text > .t1 {
-        margin-bottom: 0;
-    }
-
-    #r2:checked ~ .nav-block > .slides-text > .t1 {
-        margin-bottom: -0.9375rem;
-    }
-
-    #r3:checked ~ .nav-block > .slides-text > .t1 {
-        margin-bottom: -1.875rem;
-    }
-
-    #r4:checked ~ .nav-block > .slides-text > .t1 {
-        margin-bottom: -2.8125rem;
-    }
-
-    #r5:checked ~ .nav-block > .slides-text > .t1 {
-        margin-bottom: -3.8rem;
     }
 }
 
