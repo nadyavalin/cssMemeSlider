@@ -9,34 +9,28 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-label, a{
-	cursor: pointer;
-}
-
 .container {
     margin: 10px auto;
     max-width: 1024px;
     padding: 20px;
 }
 
+.slides-img {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px #000000;
+}
+
 .nav-block {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.slider {
-    height: 100%;
-    overflow: hidden;
-}
-
-.slides__text {
+.slides-text {
     height: 1.2rem;
     overflow: hidden;
-}
-
-.text {
-    transition: transform .6s ease;
 }
 
 .nav {
@@ -69,52 +63,63 @@ label, a{
 
 input[name="radio"] {
     opacity: 0;
-    margin-top: 95vh;
-    cursor: pointer;
     display: none;
 }
 
-input[type="radio"]:checked {
+#r1:checked ~ .nav-block > .nav > .circle-area:nth-child(1) > .circle,
+#r2:checked ~ .nav-block > .nav > .circle-area:nth-child(2) > .circle,
+#r3:checked ~ .nav-block > .nav > .circle-area:nth-child(3) > .circle,
+#r4:checked ~ .nav-block > .nav > .circle-area:nth-child(4) > .circle,
+#r5:checked ~ .nav-block > .nav > .circle-area:nth-child(5) > .circle {
     background-color: #ffffff;
-    opacity: 1;
-    pointer-events: none;
-}
-
-input[type="radio"]:checked + label.circle-area .circle {
-    border: 2px solid #ffffff;
-    background-color: #ffffff;
+    border: 1px solid #ffffff;
     opacity: 1;
     pointer-events: none;
     transition-duration: .4s;
 }
 
-.slides {
-    width: 500%;
-    height: 100%;
-    display: flex;
-    margin-bottom: 25px;
-}
-
-.slide {
+.slides-img img {
     width: 100%;
-    height: 100%;
-    transform: translateX(-100%);
-    transition: all .6s ease;
-    opacity: 1;
-}
-
-input:checked ~ .slide {
-    transform: translateX(100%);
-}
-
-input:checked + label + .slide {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-.slide img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px 0px #000000;
     object-fit: cover;
+}
+
+#r1:checked ~ .slides-img > .s1 {
+    margin-left:0;
+}
+
+#r2:checked ~ .slides-img > .s1 {
+    margin-left:-100%;
+}
+
+#r3:checked ~ .slides-img > .s1 {
+    margin-left:-200%;
+}
+
+#r4:checked ~ .slides-img > .s1 {
+    margin-left:-300%;
+}
+
+#r5:checked ~ .slides-img > .s1 {
+    margin-left:-400%;
+}
+
+
+#r1:checked ~ .nav-block > .slides-text > .t1 {
+    margin-bottom: 0px;
+}
+
+#r2:checked ~ .nav-block > .slides-text > .t1 {
+    margin-bottom: -20px;
+}
+
+#r3:checked ~ .nav-block > .slides-text > .t1 {
+    margin-bottom: -40px;
+}
+
+#r4:checked ~ .nav-block > .slides-text > .t1 {
+    margin-bottom: -60px;
+}
+
+#r5:checked ~ .nav-block > .slides-text > .t1 {
+    margin-bottom: -80px;
 }
